@@ -149,7 +149,7 @@ class _QuizAppState extends State<QuizApp> {
         ),
       );
       setState(() {
-        _currentQuestionIndex++;
+       _currentQuestionIndex = (_currentQuestionIndex + 1) % questionBank.length;
       });
     } else {
       scaffoldMessenger.showSnackBar(
